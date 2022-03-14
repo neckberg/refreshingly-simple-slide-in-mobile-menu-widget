@@ -68,7 +68,7 @@ function psmmw_html($parameters) {
 function psmmw_html_hamburger() {
   ob_start();
   ?>
-  <div class="psmmw-hamburger">
+  <div aria-hidden="true" class="psmmw-hamburger">
     <span class="psmmw-icon dashicons dashicons-menu"></span>
   <div>
   <?php
@@ -78,7 +78,7 @@ function psmmw_html_mobile_drawer() {
   if ( !is_active_sidebar('psmmw-mobile-drawer') ) return;
   ob_start();
   ?>
-  <div class="psmmw-mobile-drawer">
+  <div aria-hidden="true" class="psmmw-mobile-drawer">
     <span class="psmmw-drawer-close psmmw-icon dashicons dashicons-no"></span>
       <div class="widgets">
       <?php
