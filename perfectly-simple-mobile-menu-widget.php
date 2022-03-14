@@ -69,7 +69,7 @@ function psmmw_html_hamburger() {
   ob_start();
   ?>
   <div class="psmmw-hamburger">
-    <span class="dashicons dashicons-menu"></span>
+    <span class="psmmw-icon dashicons dashicons-menu"></span>
   <div>
   <?php
   return ob_get_clean();
@@ -79,10 +79,12 @@ function psmmw_html_mobile_drawer() {
   ob_start();
   ?>
   <div class="psmmw-mobile-drawer">
-    <span class="psmmw-drawer-close dashicons dashicons-no"></span>
-    <?php
-    dynamic_sidebar('psmmw-mobile-drawer');
-    ?>
+    <span class="psmmw-drawer-close psmmw-icon dashicons dashicons-no"></span>
+      <div class="widgets">
+      <?php
+      dynamic_sidebar('psmmw-mobile-drawer');
+      ?>
+    </div>
   </div>
   <?php
   return ob_get_clean();
