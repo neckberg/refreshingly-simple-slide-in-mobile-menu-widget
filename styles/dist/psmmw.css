@@ -1,0 +1,14 @@
+.psmmw-mobile-drawer {
+  background-color: inherit;
+  position: fixed;
+  top: 0;
+  right: 100%;
+  bottom: 0;
+  left: 0;
+  transition: .25s;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.psmmw-mobile-drawer.open {
+  right: 10%;
+}
