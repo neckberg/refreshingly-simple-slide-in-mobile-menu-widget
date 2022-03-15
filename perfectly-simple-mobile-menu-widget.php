@@ -46,7 +46,7 @@ function psmmw_load_scripts_and_styles() {
 register_sidebar([
   'name'          => 'PSMMW Mobile Drawer',
   'id'            => 'psmmw-mobile-drawer',
-  'before_widget' => '<div class="psmmw-mobile-drawer-widget-area">',
+  'before_widget' => '<div class="widget">',
   'after_widget'  => '</div>',
   'before_title'  => '<h3>',
   'after_title'   => '</h3>',
@@ -83,7 +83,7 @@ function psmmw_html_container() {
 function psmmw_html_hamburger() {
   ob_start();
   ?>
-  <div aria-hidden="true" class="psmmw-hamburger">
+  <div aria-hidden="true" class="psmmw-hamburger-bar">
     <span class="psmmw-icon dashicons dashicons-menu"></span>
   </div>
   <?php
@@ -98,14 +98,14 @@ function psmmw_html_mobile_drawer() {
   if ( !is_active_sidebar('psmmw-mobile-drawer') ) return;
   ob_start();
   ?>
-  <div aria-hidden="true" class="psmmw-mobile-drawer">
+  <aside aria-hidden="true" class="psmmw-mobile-drawer">
     <span class="psmmw-drawer-close psmmw-icon dashicons dashicons-no"></span>
       <div class="widgets">
       <?php
       dynamic_sidebar('psmmw-mobile-drawer');
       ?>
     </div>
-  </div>
+  </aside>
   <?php
   return ob_get_clean();
 }

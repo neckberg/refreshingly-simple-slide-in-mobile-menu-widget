@@ -1,5 +1,23 @@
 .psmmw-icon {
   font-size: 2rem;
+  cursor: pointer;
+}
+.psmmw-icon:hover {
+  opacity: .75;
+}
+.psmmw-drawer-close {
+  margin: 0 1rem 1rem 1rem;
+  align-self: flex-end;
+}
+.psmmw-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: .25;
+  display: none;
 }
 .psmmw-mobile-drawer {
   background-color: inherit;
@@ -13,28 +31,17 @@
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 }
-.psmmw-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #000;
-  opacity: .25;
-  display: none;
-}
-.psmmw-hamburger.open ~ .psmmw-backdrop {
+.psmmw-hamburger-bar.open ~ .psmmw-backdrop {
   display: block;
 }
-.psmmw-hamburger.open ~ .psmmw-mobile-drawer {
+.psmmw-hamburger-bar.open ~ .psmmw-mobile-drawer {
   right: 10%;
 }
-.psmmw-drawer-close {
-  margin: 0 1rem 1rem 1rem;
+.psmmw-mobile-drawer .widgets {
+  width: 75vw;
 }
-.psmmw-mobile-drawer > .widgets {
-  padding: 0 1rem 1rem 1rem;
-  width: 90vw;
+.psmmw-mobile-drawer .widgets .widget {
+  margin-bottom: 1.5rem;
 }

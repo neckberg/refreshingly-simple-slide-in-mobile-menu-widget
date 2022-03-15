@@ -12,21 +12,21 @@ jQuery(document).ready(function($) {
       // $('body').prepend(data['html']);
       $('body').prepend(data['hamburger'] + data['backdrop'] + data['drawer']);
       // let drawer = $('.psmmw-mobile-drawer');
-      let hamburger = $('.psmmw-hamburger');
-      // $('.psmmw-hamburger').click(
-      hamburger.click(
+      let hamburger_bar= $('.psmmw-hamburger-bar');
+      // $('.psmmw-hamburger-bar').click(
+      $('.psmmw-hamburger-bar > .psmmw-icon').click(
         function() {
-          if (hamburger.hasClass('open')) {
-            hamburger.removeClass('open')
+          if (hamburger_bar.hasClass('open')) {
+            hamburger_bar.removeClass('open')
           }
           else {
-            hamburger.addClass('open')
+            hamburger_bar.addClass('open')
           }
         }
       );
       $('.psmmw-drawer-close, .psmmw-backdrop').click(
         function() {
-          hamburger.removeClass('open')
+          hamburger_bar.removeClass('open')
         }
       );
 
