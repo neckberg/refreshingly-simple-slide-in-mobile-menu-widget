@@ -30,6 +30,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
 
+require plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+
 // wp_enqueue_script('slick', get_stylesheet_directory_uri() . '/resources/js/slick.js', array(), true );
 
 add_action('wp_enqueue_scripts', 'psmmw_load_scripts_and_styles');
