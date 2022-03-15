@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
           }
         }
       );
-      $('.psmmw-drawer-close').click(
+      $('.psmmw-drawer-close, .psmmw-backdrop').click(
         function() {
           hamburger.removeClass('open')
         }
