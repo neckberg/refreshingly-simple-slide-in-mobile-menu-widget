@@ -32,7 +32,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 
-// wp_enqueue_script('slick', get_stylesheet_directory_uri() . '/resources/js/slick.js', array(), true );
+// $setup = new PSMMW\Setup();
+$setup = PSMMW\Setup::run();
 
 add_action('wp_enqueue_scripts', 'psmmw_load_scripts_and_styles');
 function psmmw_load_scripts_and_styles() {
@@ -54,60 +55,13 @@ register_sidebar([
   'after_title'   => '</h3>',
 ]);
 
-
 add_action( 'rest_api_init', function () {
   register_rest_route( 'psmmw/v1', '/html', array(
     'methods' => 'GET',
     'callback' => 'psmmw_html',
   ) );
 } );
+
 function psmmw_html($parameters) {
-  return [
-    // 'html' => psmmw_html_container(),
-    'hamburger' => psmmw_html_hamburger(),
-    'backdrop' => psmmw_html_backdrop(),
-    'drawer' => psmmw_html_mobile_drawer(),
-  ];
-}
-function psmmw_html_container() {
-  ob_start();
-  ?>
-  <div aria-hidden="true" class="psmmw-container">
-    <?php
-    echo psmmw_html_hamburger();
-    echo psmmw_html_backdrop();
-    echo psmmw_html_mobile_drawer();
-    ?>
-  </div>
-  <?php
-  return ob_get_clean();
-}
-function psmmw_html_hamburger() {
-  ob_start();
-  ?>
-  <div aria-hidden="true" class="psmmw-hamburger-bar">
-    <span class="psmmw-icon dashicons dashicons-menu"></span>
-  </div>
-  <?php
-  return ob_get_clean();
-}
-function psmmw_html_backdrop() {
-  ob_start();
-  ?><div aria-hidden="true" class="psmmw-backdrop"></div><?php
-  return ob_get_clean();
-}
-function psmmw_html_mobile_drawer() {
-  if ( !is_active_sidebar('psmmw-mobile-drawer') ) return;
-  ob_start();
-  ?>
-  <aside aria-hidden="true" class="psmmw-mobile-drawer">
-    <span class="psmmw-drawer-close psmmw-icon dashicons dashicons-no"></span>
-      <div class="widgets">
-      <?php
-      dynamic_sidebar('psmmw-mobile-drawer');
-      ?>
-    </div>
-  </aside>
-  <?php
-  return ob_get_clean();
+  return PSMMW\Setup::psmmw_html();
 }
