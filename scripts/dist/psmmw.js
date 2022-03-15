@@ -8,25 +8,25 @@ jQuery(document).ready(function($) {
     type: 'get',
     url: pw_script_vars.ajax_url,  // wp-json/psmmw/v1/html
     success: function(data) {
-      console.log(data);
-      $('body').prepend(data[1]);
-      $('body').prepend(data[0]);
-      let drawer = $('.psmmw-mobile-drawer');
-      $('.psmmw-hamburger').click(
+      // console.log(data);
+      // $('body').prepend(data['html']);
+      $('body').prepend(data['hamburger'] + data['backdrop'] + data['drawer']);
+      // let drawer = $('.psmmw-mobile-drawer');
+      let hamburger = $('.psmmw-hamburger');
+      // $('.psmmw-hamburger').click(
+      hamburger.click(
         function() {
-          console.log('hey');
-          if (drawer.hasClass('open')) {
-            drawer.removeClass('open')
+          if (hamburger.hasClass('open')) {
+            hamburger.removeClass('open')
           }
           else {
-            drawer.addClass('open')
+            hamburger.addClass('open')
           }
         }
       );
       $('.psmmw-drawer-close').click(
         function() {
-          console.log('hey');
-          drawer.removeClass('open')
+          hamburger.removeClass('open')
         }
       );
 

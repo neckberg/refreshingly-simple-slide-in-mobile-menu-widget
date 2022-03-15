@@ -61,17 +61,37 @@ add_action( 'rest_api_init', function () {
 } );
 function psmmw_html($parameters) {
   return [
-    psmmw_html_hamburger(),
-    psmmw_html_mobile_drawer(),
+    // 'html' => psmmw_html_container(),
+    'hamburger' => psmmw_html_hamburger(),
+    'backdrop' => psmmw_html_backdrop(),
+    'drawer' => psmmw_html_mobile_drawer(),
   ];
+}
+function psmmw_html_container() {
+  ob_start();
+  ?>
+  <div aria-hidden="true" class="psmmw-container">
+    <?php
+    echo psmmw_html_hamburger();
+    echo psmmw_html_backdrop();
+    echo psmmw_html_mobile_drawer();
+    ?>
+  </div>
+  <?php
+  return ob_get_clean();
 }
 function psmmw_html_hamburger() {
   ob_start();
   ?>
   <div aria-hidden="true" class="psmmw-hamburger">
     <span class="psmmw-icon dashicons dashicons-menu"></span>
-  <div>
+  </div>
   <?php
+  return ob_get_clean();
+}
+function psmmw_html_backdrop() {
+  ob_start();
+  ?><div aria-hidden="true" class="psmmw-backdrop"></div><?php
   return ob_get_clean();
 }
 function psmmw_html_mobile_drawer() {
