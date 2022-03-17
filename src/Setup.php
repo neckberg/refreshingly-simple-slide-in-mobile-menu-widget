@@ -28,8 +28,7 @@ class Setup {
   }
   public static function psmmw_load_scripts_and_styles() {
     wp_enqueue_script('psmmw', self::$plugin_root_url . '/scripts/dist/psmmw.js', ['jquery']);
-    wp_localize_script('psmmw', 'pw_script_vars', array(
-      // 'alert' => __('Hey! You have clicked the buttons!', 'psmmw'),
+    wp_localize_script('psmmw', 'psmmw_script_vars', array(
       'ajax_url' => site_url( 'wp-json/psmmw/v1/html' ),
       )
     );
