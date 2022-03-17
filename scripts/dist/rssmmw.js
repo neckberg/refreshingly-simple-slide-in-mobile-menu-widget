@@ -1,12 +1,12 @@
 jQuery(document).ready(function($) {
   $.ajax({
     type: 'get',
-    url: psmmw_script_vars.ajax_url,  // wp-json/psmmw/v1/html
+    url: rssmmw_script_vars.ajax_url,  // wp-json/rssmmw/v1/html
     success: function(data) {
       let html_body = $('body');
       html_body.prepend(data['hamburger'] + data['backdrop'] + data['drawer']);
-      let css_class_open = 'psmmw-drawer-open';
-      $('.psmmw-hamburger-bar > .psmmw-icon').click(
+      let css_class_open = 'rssmmw-drawer-open';
+      $('.rssmmw-hamburger-bar > .rssmmw-icon').click(
         function() {
           if (html_body.hasClass(css_class_open)) {
             html_body.removeClass(css_class_open)
@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
           }
         }
       );
-      $('.psmmw-drawer-close, .psmmw-backdrop').click(
+      $('.rssmmw-drawer-close, .rssmmw-backdrop').click(
         function() {
           html_body.removeClass(css_class_open)
         }

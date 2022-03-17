@@ -1,4 +1,4 @@
-=== Perfectly Simple Mobile Menu Widget ===
+=== Refreshingly Simple Slide-in Mobile Menu Widget ===
 Contributors: neckberg
 Tags: simple, slide-in, mobile, drawer, menu, hamburger, widget
 Requires at least: 3.0
@@ -11,9 +11,9 @@ Add a simple slide-in mobile hamburger menu / widget area to your site.
 
 == Description ==
 
-**Perfectly Simple Mobile Menu Widget** will add a slide-in menu / widget to your WordPress site.
+**Refreshingly Simple Slide-in Mobile Menu Widget** will add a slide-in menu / widget to your WordPress site.
 
-Simply install, add widgets to the 'PSMMW Mobile Drawer' / 'PSMMW Slide-In Menu', and "voila!" - You will have a perfectly functioning slide-in menu!
+Simply install, add widgets to the 'RSSMMW Mobile Drawer' / 'RSSMMW Slide-In Menu', and "voila!" - You will have a perfectly functioning slide-in menu!
 
 Most mobile menu plugins suffer from a few problems:
 1. They are over styled, and don't match the rest of your theme
@@ -30,7 +30,7 @@ This plugin solves those problems with:
 **Can I change the background color?**
 Yes. In your WordPress Admin Dashboard, go to Appearance > Customize > Additional CSS
 add the following snippet - just replace 'white' with whatever color you need:
-.psmmw-mobile-drawer {
+.rssmmw-mobile-drawer {
   background-color: white;
 }
 

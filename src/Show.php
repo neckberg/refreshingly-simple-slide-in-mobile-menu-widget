@@ -1,5 +1,5 @@
 <?php
-namespace PSMMW;
+namespace RSSMMW;
 
 class Show {
   public static $plugin_root_url;
@@ -14,26 +14,26 @@ class Show {
   private static function hamburger() {
    ob_start();
    ?>
-   <div aria-hidden="true" class="psmmw-hamburger-bar">
-     <span class="psmmw-icon dashicons dashicons-menu"></span>
+   <div aria-hidden="true" class="rssmmw-hamburger-bar">
+     <span class="rssmmw-icon dashicons dashicons-menu"></span>
    </div>
    <?php
    return ob_get_clean();
   }
   private static function backdrop() {
    ob_start();
-   ?><div aria-hidden="true" class="psmmw-backdrop"></div><?php
+   ?><div aria-hidden="true" class="rssmmw-backdrop"></div><?php
    return ob_get_clean();
   }
   private static function mobile_drawer() {
-   // if ( !is_active_sidebar('psmmw-mobile-drawer') ) return;
+   // if ( !is_active_sidebar('rssmmw-mobile-drawer') ) return;
    ob_start();
    ?>
-   <aside aria-hidden="true" class="psmmw-mobile-drawer">
-     <span class="psmmw-drawer-close psmmw-icon dashicons dashicons-no"></span>
+   <aside aria-hidden="true" class="rssmmw-mobile-drawer">
+     <span class="rssmmw-drawer-close rssmmw-icon dashicons dashicons-no"></span>
        <div class="widgets">
        <?php
-       dynamic_sidebar('psmmw-mobile-drawer');
+       dynamic_sidebar('rssmmw-mobile-drawer');
        ?>
      </div>
    </aside>

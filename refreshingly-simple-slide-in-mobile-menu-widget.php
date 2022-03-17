@@ -10,10 +10,10 @@
  *
  * @link              https://nathaneckberg.com/perfectly-simple-mobile-menu-widget
  * @since             1.0.0
- * @package           PSMMW
+ * @package           RSSMMW
  *
  * @wordpress-plugin
- * Plugin Name:       Perfectly Simple Mobile Menu Widget
+ * Plugin Name:       Refreshingly Simple Slide-in Mobile Menu Widget
  * Plugin URI:        TODO: <link to github repo>
  * Description:       Simple slide-in mobile hamburger menu with widget area
  * Version:           1.0.0
@@ -21,7 +21,7 @@
  * Author URI:        https://nathaneckberg.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       psmmw
+ * Text Domain:       rssmmw
  * Domain Path:       /languages
  */
 
@@ -32,4 +32,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 
-$setup = PSMMW\Setup::run( plugin_dir_url( __FILE__ ) );
+$setup = RSSMMW\Setup::run( plugin_dir_url( __FILE__ ) );

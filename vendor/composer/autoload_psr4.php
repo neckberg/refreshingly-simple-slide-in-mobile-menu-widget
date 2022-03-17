@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'PSMMW\\' => array($baseDir . '/src'),
+    'RSSMMW\\' => array($baseDir . '/src'),
 );

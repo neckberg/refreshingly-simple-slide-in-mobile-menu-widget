@@ -1,16 +1,16 @@
-.psmmw-icon {
+.rssmmw-icon {
   height: 2rem;
   font-size: 2rem;
   cursor: pointer;
 }
-.psmmw-icon:hover {
+.rssmmw-icon:hover {
   opacity: .75;
 }
-.psmmw-drawer-close {
+.rssmmw-drawer-close {
   margin: 0 1rem 1rem 1rem;
   align-self: flex-end;
 }
-.psmmw-backdrop {
+.rssmmw-backdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -21,7 +21,7 @@
   opacity: .25;
   display: none;
 }
-.psmmw-mobile-drawer {
+.rssmmw-mobile-drawer {
   background-color: inherit;
   position: fixed;
   top: 0;
@@ -36,23 +36,23 @@
   flex-direction: column;
   align-items: center;
 }
-body.psmmw-drawer-open {
+body.rssmmw-drawer-open {
   height: 100vh;
   overflow-y: hidden;
   /* padding-right: 15px; */  /* Avoid width reflow */
   position: fixed;
 }
-body.psmmw-drawer-open > .psmmw-backdrop,
-.psmmw-hamburger-bar.open ~ .psmmw-backdrop {
+body.rssmmw-drawer-open > .rssmmw-backdrop,
+.rssmmw-hamburger-bar.open ~ .rssmmw-backdrop {
   display: block;
 }
-body.psmmw-drawer-open > .psmmw-mobile-drawer,
-.psmmw-hamburger-bar.open ~ .psmmw-mobile-drawer {
+body.rssmmw-drawer-open > .rssmmw-mobile-drawer,
+.rssmmw-hamburger-bar.open ~ .rssmmw-mobile-drawer {
   right: 10%;
 }
-.psmmw-mobile-drawer .widgets {
+.rssmmw-mobile-drawer .widgets {
   width: 75vw;
 }
-.psmmw-mobile-drawer .widgets .widget {
+.rssmmw-mobile-drawer .widgets .widget {
   margin-bottom: 1.5rem;
 }
