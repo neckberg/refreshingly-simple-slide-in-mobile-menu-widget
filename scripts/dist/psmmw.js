@@ -10,23 +10,26 @@ jQuery(document).ready(function($) {
     success: function(data) {
       // console.log(data);
       // $('body').prepend(data['html']);
-      $('body').prepend(data['hamburger'] + data['backdrop'] + data['drawer']);
+      let html_body = $('body');
+      html_body.prepend(data['hamburger'] + data['backdrop'] + data['drawer']);
+      // $('body').prepend(data['hamburger'] + data['backdrop'] + data['drawer']);
       // let drawer = $('.psmmw-mobile-drawer');
-      let hamburger_bar= $('.psmmw-hamburger-bar');
+      // let hamburger_bar= $('.psmmw-hamburger-bar');
       // $('.psmmw-hamburger-bar').click(
+      let css_class_open = 'psmmw-drawer-open';
       $('.psmmw-hamburger-bar > .psmmw-icon').click(
         function() {
-          if (hamburger_bar.hasClass('open')) {
-            hamburger_bar.removeClass('open')
+          if (html_body.hasClass(css_class_open)) {
+            html_body.removeClass(css_class_open)
           }
           else {
-            hamburger_bar.addClass('open')
+            html_body.addClass(css_class_open)
           }
         }
       );
       $('.psmmw-drawer-close, .psmmw-backdrop').click(
         function() {
-          hamburger_bar.removeClass('open')
+          html_body.removeClass(css_class_open)
         }
       );
 

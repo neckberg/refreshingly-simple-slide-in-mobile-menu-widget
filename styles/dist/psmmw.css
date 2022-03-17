@@ -36,9 +36,17 @@
   flex-direction: column;
   align-items: center;
 }
+body.psmmw-drawer-open {
+  height: 100vh;
+  overflow-y: hidden;
+  /* padding-right: 15px; */  /* Avoid width reflow */
+  position: fixed;
+}
+body.psmmw-drawer-open > .psmmw-backdrop,
 .psmmw-hamburger-bar.open ~ .psmmw-backdrop {
   display: block;
 }
+body.psmmw-drawer-open > .psmmw-mobile-drawer,
 .psmmw-hamburger-bar.open ~ .psmmw-mobile-drawer {
   right: 10%;
 }
