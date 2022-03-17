@@ -13,12 +13,12 @@ Add a simple slide-in mobile hamburger menu / widget area to your site.
 
 **Refreshingly Simple Slide-in Mobile Menu Widget** will add a slide-in menu / widget to your WordPress site.
 
-Simply install, add widgets to the 'RSSMMW Mobile Drawer' / 'RSSMMW Slide-In Menu', and "voila!" - You will have a perfectly functioning slide-in menu!
+Simply install, add widgets to the 'RSSMMW Mobile Drawer' widget area, and "voila!" - You will have a perfectly functioning slide-in menu!
 
 Most mobile menu plugins suffer from a few problems:
-1. They are over styled, and don't match the rest of your theme
-2. They lock you into a standard layout - for instance, just a single menu and an optional logo
-3. They are overly complex to configure and customize
+1. They are over styled, and don't match the rest of your theme.
+2. They lock you into a standard layout - for instance, just a single menu and an optional logo.
+3. They are overly complex to configure and customize.
 
 This plugin solves those problems with:
 1. Minimal styling: inherits styles from your theme.
