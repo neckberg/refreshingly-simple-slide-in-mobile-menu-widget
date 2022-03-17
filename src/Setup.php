@@ -8,6 +8,8 @@ class Setup {
     self::$plugin_root_url = $plugin_root_url;
     add_action('wp_enqueue_scripts', 'PSMMW\Setup::psmmw_load_scripts_and_styles');
 
+    wp_enqueue_style( 'dashicons' );  // Add Dashicons in WordPress Front-end
+
     register_sidebar([
       'name'          => 'PSMMW Mobile Drawer',
       'id'            => 'psmmw-mobile-drawer',
@@ -25,7 +27,7 @@ class Setup {
     } );
   }
   public static function psmmw_load_scripts_and_styles() {
-    wp_enqueue_script('psmmw', self::$plugin_root_url . '/scripts/dist/psmmw.js');
+    wp_enqueue_script('psmmw', self::$plugin_root_url . '/scripts/dist/psmmw.js', ['jquery']);
     wp_localize_script('psmmw', 'pw_script_vars', array(
       // 'alert' => __('Hey! You have clicked the buttons!', 'psmmw'),
       'ajax_url' => site_url( 'wp-json/psmmw/v1/html' ),
@@ -69,7 +71,7 @@ class Setup {
    return ob_get_clean();
   }
   private static function psmmw_html_mobile_drawer() {
-   if ( !is_active_sidebar('psmmw-mobile-drawer') ) return;
+   // if ( !is_active_sidebar('psmmw-mobile-drawer') ) return;
    ob_start();
    ?>
    <aside aria-hidden="true" class="psmmw-mobile-drawer">
