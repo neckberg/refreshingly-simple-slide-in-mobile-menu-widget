@@ -36,24 +36,10 @@ class Setup {
   }
   public static function psmmw_html() {
    return [
-     // 'html' => psmmw_html_container(),
      'hamburger' => self::psmmw_html_hamburger(),
      'backdrop' => self::psmmw_html_backdrop(),
      'drawer' => self::psmmw_html_mobile_drawer(),
    ];
-  }
-  private static function psmmw_html_container() {
-   ob_start();
-   ?>
-   <div aria-hidden="true" class="psmmw-container">
-     <?php
-     echo psmmw_html_hamburger();
-     echo psmmw_html_backdrop();
-     echo psmmw_html_mobile_drawer();
-     ?>
-   </div>
-   <?php
-   return ob_get_clean();
   }
   private static function psmmw_html_hamburger() {
    ob_start();
