@@ -14,7 +14,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Refreshingly Simple Slide-in Mobile Menu Widget
- * Plugin URI:        TODO: <link to github repo>
+ * Plugin URI:        https://github.com/neckberg/refreshingly-simple-slide-in-mobile-menu-widget
  * Description:       Simple slide-in mobile hamburger menu with widget area
  * Version:           1.0.0
  * Author:            Nathan Eckberg
